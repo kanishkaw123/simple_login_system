@@ -4,6 +4,7 @@ import mysql.connector
 Connection=mysql.connector.connect(host='127.0.0.1',user='root',password='kanishka12@AB',database='user_data')
 cursor=Connection.cursor()
 
+#the class used to store properies of instances.
 class user:
     def __init__(self):
         self.id=None
@@ -15,7 +16,7 @@ class user:
         
 client=user()
 
-
+#checking whether the user is registered
 def exisiting_customer():
     username=input("please enter your username: \n")
     password=input("please enter your password: \n")
@@ -27,8 +28,9 @@ def exisiting_customer():
         client.surname=i[2]
         client.email=i[3]
     print(client.name,client.surname,client.email,client.username,client.password)
-
+#creating a new account
 def create_new():
+    #getting email and validating it
     def getEmail():
         clEmail=input("Please enter your email address: \n")
         atCheck=0
@@ -56,6 +58,7 @@ def create_new():
                     customer_status_checker()
             else:
                 getUsername(clEmail)
+    #getting username
     def getUsername(clEmail):
         username=input("please enter your username: \n").strip()
         usernames=[]
@@ -71,7 +74,7 @@ def create_new():
             getPassword(username,clEmail)
 
 
-
+    #getting password and validating it
     def getPassword(username,clEmail):
         password=input("please enter your password: \n")
         
@@ -107,7 +110,7 @@ def create_new():
         else:
             fetchDataToDatabase(username,password,clEmail)
 
-
+    #insering data to the database
     def fetchDataToDatabase(username,password,clEmail):
         clFirstName=input("Please enter your first name: \n")
         clSurName=input("Please enter your surname: \n")
@@ -118,6 +121,7 @@ def create_new():
         client.password=password
         authentication()
 
+    #authenticating data
     def authentication():
         print("DATA YOU ENTERED: \n USERNAME: {} \n FIRST NAME: {}\n SURNAME: {} \n E-MAIL: {}".format(client.username,client.name,client.surname,client.email))
         authority=input("Do you want to continue? (y/n) \n")
@@ -136,7 +140,7 @@ def create_new():
     getEmail()
 
 
-
+#checking if user registered.
 def customer_status_checker():
     status=input("Do you have an existing account? \n")
     if "y"==status or "yes"==status:
@@ -145,7 +149,7 @@ def customer_status_checker():
         create_new()
 
 
-
+#running the starter function
 if __name__=="__main__":
     customer_status_checker()
 
