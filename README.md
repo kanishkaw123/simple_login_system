@@ -3,7 +3,7 @@
 This is a simple Python - MySQL database which consist of a Tkinter GUI. This programme allows users to create accounts and store data on a MySQL database securely and conveniently. 
 
 ## Installation
-1. First download MySQL and MySQL Connector.
+1. First download and install MySQL and MySQL Connector.
 2. Download all the file in the current repository file.
 3. Unzip the downloaded folder to a preffered location in your local drive.
 4. Edit the **conn.data** file in the root folder as shown below.
