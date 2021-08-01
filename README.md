@@ -1,2 +1,30 @@
 # Simple Login System
-I  wrote this code as my first project- A Simple Login system. When running this code , first it ask whether the client is registered or not. If the client says "YES" it will ask for login information. If client says "NO" then the code will ask for client's email address for registration. Once the client entered the email address , the code check that email throughout the database to make sure that email is not already registered. If the Email is not found the client can continue the registration. Otherwise, code will ask the client if he/she wants to register with a new email. Once client have successfully entered the email he/she can continue with the login process. Throughout this process new client has to use a unique username that doesn't exist on the system. Also, the client has to use a password with minimum of one capital letter, a special character and a number . After those steps client can submit the data to the database and then client will be given his/her unique ID .
+
+This is a simple Python - MySQL database which consist of a Tlinter GUI. This programme allows users to create accounts and store data on a MySQL database securely and conveniently. 
+
+## Installation
+1. First download MySQL and MySQL Connector.
+2. Download Login_System_Install.zip file.
+3. Unzip it to a preffered location in your local drive.
+4. Edit the **conn.data** file as shown below.
+    - Replace line 1 with your MySQL host IP address.
+    - Replace line 2 with your MySQL username.
+    - Replace line 3 with your MySQL password.
+5. Do not change the **database.name**.
+6. Now run the programme. The programme must automatically create the database
+
+###### If the database isn't created automatically following steps.
+
+1. Create a database useing this command : `create database user_data;`
+2. Create a new table using the code snippet shown below.
+
+   ` create table users (
+      user_id int not null primary key auto_increment, 
+      firstname varchar(30) not null, 
+      surname varchar(40) not null, 
+      email varchar(70) not null,
+      username varchar(20) not null,
+      password varchar(16) not null,
+      data text null);`
+
+3. Recommended: Set the initial value for 'user_id' with this command:  `alter table users auto_increment=1000; `
