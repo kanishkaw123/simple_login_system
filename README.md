@@ -13,7 +13,7 @@ This is a simple Python - MySQL database which consist of a Tlinter GUI. This pr
 5. Do not change the **database.name**.
 6. Now run the programme. The programme must automatically create the database
 
-###### If the database isn't created automatically following steps.
+###### If the database isn't created automatically, do the following steps.
 
 1. Create a database useing this command : `create database user_data;`
 2. Create a new table using the code snippet shown below.
