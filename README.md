@@ -1,6 +1,6 @@
 # Simple Login System
 
-This is a simple Python - MySQL database which consist of a Tlinter GUI. This programme allows users to create accounts and store data on a MySQL database securely and conveniently. 
+This is a simple Python - MySQL database which consist of a Tkinter GUI. This programme allows users to create accounts and store data on a MySQL database securely and conveniently. 
 
 ## Installation
 1. First download MySQL and MySQL Connector.
