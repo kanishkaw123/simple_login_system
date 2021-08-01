@@ -4,9 +4,9 @@ This is a simple Python - MySQL database which consist of a Tkinter GUI. This pr
 
 ## Installation
 1. First download MySQL and MySQL Connector.
-2. Download Login_System_Install.zip file.
-3. Unzip it to a preffered location in your local drive.
-4. Edit the **conn.data** file as shown below.
+2. Download all the file in the current repository file.
+3. Unzip the downloaded folder to a preffered location in your local drive.
+4. Edit the **conn.data** file in the root folder as shown below.
     - Replace line 1 with your MySQL host IP address.
     - Replace line 2 with your MySQL username.
     - Replace line 3 with your MySQL password.
